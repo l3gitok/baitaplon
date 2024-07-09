@@ -1,0 +1,572 @@
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #de5c8c, #d2001a);
+    background-size: 400% 400%; /* Để tăng kích thước gradient */
+    background-position: center;
+    text-align: center;
+    animation: gradientAnimation 12s ease-in-out infinite; /* Đổi tên animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Bắt đầu từ vị trí 0% */
+    }
+    50% {
+        background-position: 100% 50%; /* Di chuyển đến vị trí 100% */
+    }
+    100% {
+        background-position: 0% 50%; /* Quay trở lại vị trí ban đầu */
+    }
+}
+
+
+header {
+    background-color: #ffffff;
+    color: #4e9e53;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 88px;
+    margin-left: 20px;
+}
+
+.logo img {
+    max-height: 67px;
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #da1b60;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    color: #da1b60;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 20px;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+nav a {
+    color: #da1b60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Đường viền bảng */
+.table th, .table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Màu nền header */
+.table th {
+    background-color: #f2f2f2;
+}
+
+/* Hiệu ứng hover cho các hàng */
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Các chỉnh sửa thêm cho trang trí */
+.table td {
+    font-size: 14px;
+}
+
+/* Các chỉnh sửa thêm cho viền bảng */
+.table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    border-radius: 8px;
+}
+
+/* Đổi màu background của các hàng trong bảng */
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #da1b60;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.btn-add {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-add {
+    display: inline-block;
+    padding: 8px 15px; 
+    font-size: 14px;
+    border-radius: 4px; 
+}
+/* Reset và font chữ */
+
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #078710;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 88px;
+    margin-left: 20px;
+}
+
+.logo img {
+    max-height: 67px;
+    width:auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #da1b60;
+}
+
+/* Booking Form */
+#room-list {
+    background-color: #fff;
+    padding: 2em;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#room-list h2 {
+    text-align: center;
+    color: #da1b60;
+    margin-bottom: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+thead {
+    background-color: #da1b60;
+    color: white;
+}
+
+th, td {
+    padding: 1em;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #da1b60;
+    color: white;
+    margin-top: 2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #da1b60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff8a00;
+    transform: translateY(-2px);
+}
+
+.room-status {
+    font-weight: bold;
+}
+
+.room-status.available {
+    background-color: #4caf50;
+    color: white;
+}
+
+.room-status.unavailable {
+    background-color: #f44336;
+    color: white;
+}
+
+.approve-button {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.approve-button:hover {
+    background-color: #0b7dda;
+}
+
+.room-status.occupied {
+    background-color: #ff9800;
+    color: white;
+}
+.button {
+    background-color: #da1b60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff8a00;
+    transform: translateY(-2px);
+}
+section {
+
+    
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thiết lập cho bảng */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+table {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px; /* Độ bo tròn các góc */
+    overflow: hidden;
+}
+
+ table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Hiệu ứng hover trên các dòng trong bảng */
+table tbody tr:hover {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi thay đổi số lượng phòng */
+table tbody tr.changed td {
+    background-color: #9aff9a;
+    transition: background-color 0.5s ease;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 100% 0; /* Bắt đầu từ vị trí 100% bên phải */
+    }
+    25% {
+        background-position: -75% 0; /* Di chuyển gradient sang trái */
+    }
+    50% {
+        background-position: -50% 0; /* Di chuyển gradient sang trái */
+    }
+    75% {
+        background-position: -25% 0; /* Di chuyển gradient sang trái */
+    }
+    100% {
+        background-position: 100% 0; /* Kết thúc tại vị trí 100% bên phải */
+    }
+}
+
+table th {
+    background-color: #da1b60; /* Màu nền mặc định */
+    background-image: linear-gradient(to left, #de5c8c, #da1b60,#7462ff,#d2001a); /* Gradient từ phải sang trái */
+    background-size: 200% 100%; /* Kích thước gradient là 200% (để nó trải ra phía bên phải) và chiều cao 100% */
+    animation: gradientAnimation 10s linear infinite;
+}
+
+/* Hiệu ứng khi hover vào header */
+table th:hover {
+    background-position: -100% 0; /* Dịch chuyển gradient sang trái */
+}
+.hero1{
+    background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #de5c8c, #d2001a);
+    background-size: 400% 400%;
+    background-position: center;
+    text-align: center;
+    animation: gradientAnimation 12s ease-in-out infinite;
+}
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #de5c8c, #d2001a);
+    background-size: 400% 400%; /* Để tăng kích thước gradient */
+    background-position: center;
+    text-align: center;
+    animation: gradientAnimation 12s ease-in-out infinite; /* Đổi tên animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Bắt đầu từ vị trí 0% */
+    }
+    50% {
+        background-position: 100% 50%; /* Di chuyển đến vị trí 100% */
+    }
+    100% {
+        background-position: 0% 50%; /* Quay trở lại vị trí ban đầu */
+    }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5em;
+}
+table tbody td{
+    padding: 15px; /* Khoảng cách nội dung bên trong ô */
+    text-align: left; /* Căn giữa nội dung */
+    font-weight: bold; /* Chữ in đậm */
+    color: #fff; /* Màu văn bản */
+    background-color: #7bb0f6; /* Màu nền mặc định */
+    border-radius: 2px; /* Bo tròn góc */
+    animation:  colorChange 5s infinite; /* Áp dụng animation */
+
+}
+@keyframes colorChange {
+    0% {
+        background-color: #7bb0f6; /* Màu nền ban đầu */
+    }
+    25% {
+        background-color: #63a3f6; /* Màu nền ban đầu */
+    }
+    50% {
+        background-color: #7bb0f9; /* Màu nền giữa thời gian */
+    }
+    75% {
+        background-color: #7bb0f4; /* Màu nền ban đầu */
+    }
+    100% {
+        background-color: #7bb0f6; /* Màu nền lại ban đầu */
+    }
+}
+
+/* Nút hủy bỏ */
+#cancel-edit {
+    background-color: #da1b60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#cancel-edit:hover {
+    background-color: #ff8a00;
+    transform: translateY(-2px);
+
+}
+#edit-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+#submit-edit {
+    background-color: #da1b60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+header {
+    background-color:#ffffff;
+    color: #4e9e53;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    color:#da1b60
+}
+.text-color{
+    color: #da1b60;
+}
+
+header nav ul li {
+    position: relative;
+    padding: 10px 20px ;
+    color:#da1b60
+}
+header nav ul li:hover .dropdown-menu {
+    display: block;
+}    
+header nav a {
+    color:#da1b60;
+    text-decoration: none;
+    font-weight: bold;
+}
+.gradient-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #da1b60;
+    text-decoration: none;
+    text-align: center;
+    border: #da1b60 2px solid;
+    cursor: pointer;
+    background-color:#ffffff;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s,color 0.3s;
+}
+
+.gradient-button:hover {
+    transform: translateY(10px);
+    background-color:#da1b60;
+    color: #fcfbfc;
+}
+@keyframes appear{
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}   
+.block{
+        animation: appear 1s linear;
+        animation-timeline: view(0s);
+        animation-range: entry 70%;
+}

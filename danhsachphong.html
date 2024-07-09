@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Phòng</title>
+    <link rel="stylesheet" href="danhsachphong.css">
+</head>
+<body></body>
+    <header>
+        <a href="duancuoiky.html" class="logo">
+            <img src="King hotel.png" alt="Logo">
+        </a>
+        <h1>Danh Sách Phòng</h1>
+    </header>
+    <a href="duancuoiky.html" class="back-button">Quay Lại</a>
+    <main>
+        
+        <section id="booking-form" class="hero1" >    
+            <table id="booking-table">
+                <thead>
+                    <tr>
+                        <th>Ngày Nhận Phòng</th>
+                        <th>Ngày Trả Phòng</th>
+                        <th>Loại Phòng</th>
+                        <th>SĐT</th>
+                        <th>CCCD</th>
+                        <th>Chỉnh sửa</th>
+                        <th>Xóa</th>
+                        <th>Duyệt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+            <section id="booking-form" class = "hero">    
+                <table id="room-table">
+                    <thead>
+                        <tr>
+                            <th>Loại Phòng</th>
+                            <th>Số Phòng</th>
+                            <th>Tình Trạng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Phòng Đơn</td>
+                            <td id="single-room-count">10</td>
+                            <td id="single-room-status">Còn Trống</td>
+                        </tr>
+                        <tr>
+                            <td>Phòng Đôi</td>
+                            <td id="double-room-count">5</td>
+                            <td id="double-room-status">Còn Trống</td>
+                        </tr>
+                        <tr>
+                            <td>Suite</td>
+                            <td id="suite-room-count">2</td>
+                            <td id="suite-room-status">Còn Trống</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>    
+    </main>
+        <div id="edit-form">
+            <h2>Chỉnh sửa thông tin đặt phòng</h2>
+            <form>
+                <label for="edit-check-in-date">Ngày nhận phòng:</label>
+                <input type="date" id="edit-check-in-date"><br><br>
+
+                <label for="edit-check-out-date">Ngày trả phòng:</label>
+                <input type="date" id="edit-check-out-date"><br><br>
+
+                <label for="edit-room-type">Loại phòng:</label>
+                <select id="edit-room-type">
+                    <option value="single">Phòng Đơn</option>
+                    <option value="double">Phòng Đôi</option>
+                    <option value="suite">Suite</option>
+                </select><br><br>
+
+                <label for="edit-phone">Số điện thoại:</label>
+                <input type="tel" id="edit-phone"><br><br>
+
+                <label for="edit-cccd">CCCD:</label>
+                <input type="text" id="edit-cccd" readonly><br><br>
+
+                <button type="submit" id="submit-edit">Lưu thay đổi</button>
+                <button type="submit" id="cancel-edit">Hủy bỏ</button>
+            </form>
+        </div>
+    
+    <script src="danhsachphong.js"></script>
+    <footer>
+        <p>&copy; 2024 Hotel Booking System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

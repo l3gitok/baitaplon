@@ -1,0 +1,181 @@
+/* Reset và font chữ */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1f1;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #078710;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 88px; /* Điều chỉnh kích thước logo tùy theo nhu cầu */
+    margin-left: 20px; /* Khoảng cách từ logo đến lề trái */
+}
+
+.logo img {
+    max-height: 67px;
+    width:auto; /* Adjust as needed */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #da1b60;
+}
+
+/* GIF Background */
+.gif-background {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.gif-background img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking Form */
+#booking-form {
+    background-color: #fff;
+    padding: 2em;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#booking-form h2 {
+    text-align: center;
+    color: #da1b60;
+    margin-bottom: 1em;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+#booking-form input,
+#booking-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.gradient-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #da1b60;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid #da1b60;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.gradient-button:hover {
+    transform: translateY(-2px);
+    background-color: #da1b60;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #da1b60;
+    color: white;
+    margin-top: 2em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #da1b60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff8a00;
+    transform: translateY(-2px);
+}
+#booking-form label {
+    color: #da1b60; /* Màu chữ mong muốn */
+    font-weight: bold; /* Đậm chữ để nổi bật */
+    margin-bottom: 0.5em; /* Khoảng cách dưới giữa các label */
+}

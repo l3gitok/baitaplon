@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng Khách Sạn</title>
+    <link rel="stylesheet" href="l.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <a href="duancuoiky.html" class="logo">
+            <img src="King hotel.png" alt="Logo">
+        </a>
+        <h1>Đặt Phòng Khách Sạn</h1>
+    </header>
+    <a href="duancuoiky.html" class="back-button">Quay Lại</a>
+    <main>
+        <section id="booking-form">
+            <h2>Đặt Phòng</h2>
+            <form id="booking-form">
+                <label for="check-in-date">Ngày Nhận Phòng:</label>
+                <input type="date" id="check-in-date" required>
+
+                <label for="check-out-date">Ngày Trả Phòng:</label>
+                <input type="date" id="check-out-date" required>
+
+                <label for="room-type">Loại Phòng:</label>
+                <select id="room-type" required>`   `   jpg
+                                       <option value="single">Phòng Đơn</option>
+                    <option value="double">Phòng Đôi</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <label for="SĐT">SĐT:</label>
+                <input type="number" id="phone" required>
+                <label for="CCCD">CCCD</label>
+                <input type="number" id="CCCD" required>
+
+                <button type="submit" class="gradient-button">Đặt Phòng</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hotel Booking System. All rights reserved.</p>
+    </footer>
+    <script src="aothatday.js"></script>
+</body>
+</html>

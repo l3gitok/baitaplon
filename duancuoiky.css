@@ -1,0 +1,674 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1f1;
+    color: #333;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80')
+}
+
+header {
+    background-color:#ffffff;
+    color: #078710;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    color:#da1b60
+}
+.text-color{
+    color: #da1b60;
+}
+
+header nav ul li {
+    position: relative;
+    padding: 10px 20px ;
+    color:#da1b60
+}
+header nav ul li:hover .dropdown-menu {
+    display: block;
+}    
+header nav a {
+    color:#da1b60;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+    border-top: 2px solid #da1b60;
+    list-style: none;
+}
+.dropdown-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+.hero {
+    background-image: url('_e6eab1a3-d897-4ade-bd39-90496c07f5e6.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #efe1e1;
+    text-align: center;
+    padding: 2em;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5em;
+}
+
+
+.features, .benefits {
+    padding: 2em;
+    text-align: center;
+    background-color: #e1d9d9;
+    box-shadow: 0 2px 4px rgba(10, 5, 5, 0.1);
+}
+
+.features ul, .benefits ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.features li, .benefits li {
+    margin-bottom: 2em;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features li img,
+.benefits li img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 15px; 
+}
+
+button:hover, a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.gradient-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #da1b60;
+    text-decoration: none;
+    text-align: center;
+    border: #da1b60 2px solid;
+    cursor: pointer;
+    background-color:#ffffff;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s,color 0.3s;
+}
+
+.gradient-button:hover {
+    transform: translateY(10px);
+    background-color:#da1b60;
+    color: #fcfbfc;
+}
+@keyframes appear{
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}   
+.block{
+        animation: appear 1s linear;
+        animation-timeline: view(0s);
+        animation-range: entry 70%;
+}
+.button {
+    padding: 9px 25px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color:rgb(201, 4, 66);
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    background-color:rgba(201,4,67);
+}   
+.highlight-section {
+    padding: 2em;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.highlight-section h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+}
+
+.highlight-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.highlight-section ul li {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5em;
+    padding: 1em;
+    flex: 0 1 calc(33% - 1em);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight-section ul li:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-section ul li i {
+    font-size: 2rem;
+    color: #da1b60;
+    margin-bottom: 0.5em;
+}
+
+.highlight-section ul li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.highlight-section ul li p {
+    font-size: 1rem;
+    color: #666;
+}
+.highlight-section {
+    padding: 2em;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 2em;
+}
+
+.highlight-section h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+}
+
+.highlight-section p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+}
+
+.highlight-section i {
+    font-size: 2rem;
+    color: #da1b60;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.highlight-section .feature-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.highlight-section figure {
+    flex: 1;
+    margin-right: 1em;
+    text-align: center;
+}
+
+.highlight-section figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight-section figure img:hover {
+    transform: scale(1.05);
+}
+
+.highlight-section figcaption {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5em;
+}
+/* CSS cho nút và thanh trạng thái */
+.room-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.booking-button {
+    background-color: #da1b60;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+    background-color: #ff8a00;
+}
+
+.room-status {
+    font-size: 0.9rem;
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+}
+
+.room-status.available {
+    background-color: #4caf50;
+    color: white;
+}
+
+.room-status.unavailable {
+    background-color: #f44336;
+    color: white;
+}
+
+.room-status-label {
+    font-size: 0.9rem;
+    padding-right: 0.5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+}
+.room-status-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Đẩy container chứa trạng thái phòng về bên phải */
+}
+
+.room-status-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-right: 0.3em; /* Điều chỉnh khoảng cách giữa "Trạng thái:" và trạng thái phòng */
+}
+
+.room-status {
+    font-size: 0.9rem;
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+}
+
+.room-status.available {
+    background-color: #4caf50;
+    color: white;
+}
+
+.room-status.unavailable {
+    background-color: #f44336;
+    color: white;
+}
+
+.logo {
+    position: absolute;
+    top: 20px; /* Điều chỉnh vị trí top nếu cần */
+    left: 20px; /* Điều chỉnh vị trí left nếu cần */
+    max-width: 100px; /* Điều chỉnh kích thước tối đa của logo */
+    z-index: 1000; /* Đảm bảo logo hiển thị trên các phần khác */
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 88px; /* Điều chỉnh kích thước logo tùy theo nhu cầu */
+    margin-left: 20px; /* Khoảng cách từ logo đến lề trái */
+}
+
+h1 {
+    margin: 0;
+    padding-left: 100px;
+}
+.call-to-action {
+    background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #de5c8c, #d2001a);
+    color: #fefefe;
+    padding: 2em;
+    text-align: center;
+    animation: gradientAnimation 12s ease-in-out infinite; /* Đổi tên animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Bắt đầu từ vị trí 0% */
+    }
+    50% {
+        background-position: 100% 50%; /* Di chuyển đến vị trí 100% */
+    }
+    100% {
+        background-position: 0% 50%; /* Quay trở lại vị trí ban đầu */
+    }
+}
+
+
+
+.call-to-action h2 {
+    margin-bottom: 0.5em;
+}
+
+.call-to-action p {
+    margin-bottom: 2em;
+}
+
+.call-to-action button {
+    background-color: #faf7df;
+    color: #007bff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action button:hover {
+    background-color: #ffc107;
+}
+/* Styles for chatbot */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #da1b60;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.chatbot-toggle:hover {
+    background-color: #da1b60;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.chatbot-container.open {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.chat-box {
+    max-height: 300px; /* Example maximum height for chat messages */
+    overflow-y: auto; /* Enable scrolling for messages */
+    padding: 10px;
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.user-input input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.user-input button {
+    padding: 8px 15px;
+    background-color: #da1b60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Example styles for chat messages */
+.chat-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    max-width: 80%; /* Limit message width for better readability */
+}
+
+.chat-message.bot {
+    color:#FFFFFF ;
+    background-color: #da1b60;
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.chat-message.user {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end; /* Align user messages to the right */
+    margin-left: auto; /* Lệch lề trái tự động cho tin nhắn người dùng */
+}
+
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.gradient-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #f06, #f90);
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, #f90, #f06);
+}
+
+/* Highlight Section Styles */
+.highlight-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.highlight-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.room-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.room-list li {
+    background: #f4f4f4;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.room-list img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-list h3 {
+    padding: 0 20px;
+}
+
+.room-list p {
+    padding: 0 20px;
+}
+
+.room-details {
+    padding: 20px;
+}
+
+.room-status-container {
+    margin-top: 10px;
+}
+
+.room-status-label {
+    font-weight: bold;
+}
+
+.room-status {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.room-status.available {
+    background-color: #4CAF50;
+}
+
+.room-status.unavailable {
+    background-color: #FF0000;
+}
+
+.booking-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.booking-button:hover {
+    background: #555;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .room-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room-list li {
+        width: 80%;
+    }
+}

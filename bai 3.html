@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý khách sạn</title>
+    <link rel="stylesheet" href="bai3.css">
+</head>
+<body>
+    <section class="hero block">
+        <div class="wrapper">
+            <div class="form-wrapper sign-in">
+                <form action="#">
+                    <h2>Đăng nhập hệ thống quản lý khách sạn</h2>
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Tên đăng nhập" required>
+                    </div>    
+                    <div class="input-group">    
+                        <input type="password" name="password" placeholder="Mật khẩu" required>               
+                    </div>
+                    <button type="submit">Đăng nhập</button>
+                </form>    
+                    
+            <div class="error-message"></div>
+        </div>
+    </section>
+
+    <script>
+        const loginForm = document.querySelector('.form-wrapper.sign-in form');
+        const errorMessageElement = document.querySelector('.error-message');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            if (username === 'admin' && password === 'admin') {
+                window.location.href = 'http://127.0.0.1:5500/index.html'; 
+            } else {
+                errorMessageElement.textContent = 'Tài khoản hoặc mật khẩu không chính xác';
+            }
+        });
+    </script>
+</body>
+</html>

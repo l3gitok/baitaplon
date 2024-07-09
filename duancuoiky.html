@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel System Website</title>
+    <link rel="stylesheet" href="duancuoiky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="King hotel.png" alt="Your Logo" class="logo">
+        <nav class="navbar">
+            <ul>
+                <li><a href="duancuoiky.html"><button class="button block">Trang chủ</button></a></li>
+                <li>
+                    <a href="l.html"><button class="button block">Đặt phòng</button></a>
+                </li>
+                <li>
+                    <a href="bai 3.html"><button class="button block">Quản lí nhân sự</button></a>
+                </li>
+                <li><a href="facebook.com"><button class="button block">Liên hệ</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button id="toggleChatbot" class="chatbot-toggle">
+            <i class="fas fa-comment"></i>
+        </button>
+        
+        <div class="chatbot-container" id="chatContainer">
+            <div class="chat-box" id="chatBox">
+            </div>
+            <div class="user-input">
+                <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn...">
+                <button onclick="sendMessage()">Gửi</button>
+            </div>
+        </div>
+             
+        <div>
+        <section class="hero block">
+            <h1>Chào mừng đến với khách sạn của chúng tôi: KING HOTEL</h1>
+            <p>Trải nghiệm thú vị và sang trọng cho khách hàng.</p>
+            <button class="gradient-button">Tìm hiểu thêm</button>
+        </section>
+        </div>  
+    
+        <section class="features-container">
+            <section class="features highlight-section block">
+                <h2>Quản lý đặt chỗ</h2>
+                <i class="fas fa-calendar block"></i>
+                <p>Quản lý đặt phòng, nhận phòng và trả phòng với giao diện trực quan của chúng tôi.</p>
+            </section>
+        
+            <section class="features highlight-section block">
+                <h2>Quản lý phòng</h2>
+                <i class="fas fa-bed block"></i>
+                <p>Theo dõi tình trạng phòng, giá và lịch trình bảo trì.</p>
+            </section>
+        
+            <section class="features highlight-section block">
+                <h2>Lập hóa đơn và thanh toán</h2>
+                <i class="fas fa-credit-card block"></i>
+                <p>Quy trình lập hóa đơn và thanh toán của bạn với cổng thanh toán tích hợp của chúng tôi.</p>
+            </section>
+        
+            <section class="features highlight-section block">
+                <h2>Quản lý quan hệ khách hàng</h2>
+                <i class="fas fa-users block"></i>
+                <p>Theo dõi sở thích và phản hồi của khách hàng.</p>
+            </section>
+        
+            <section class="features highlight-section block">
+                <h2>Báo cáo và phân tích</h2>
+                <i class="fas fa-chart-bar block"></i>
+                <p>Các công cụ phân tích và báo cáo toàn diện của chúng tôi.</p>
+            </section>
+        </section>
+    </main>
+    
+    <section id="rooms" class="highlight-section">
+        <h2>Các loại phòng</h2>
+        <ul class="room-list">
+            <li>
+                <img src="1c397912-b34e-43cd-b555-5b8d814ae6a0 (1).jpg" alt="Phòng Đơn">
+                <h3>Phòng Đơn</h3>
+                <p>Sang trọng và tiện nghi cho một người.</p>
+                <p>Giá: $100/đêm</p>
+                <div class="room-details block">
+                    <a href="l.html"><button class="booking-button block">Đặt phòng</button></a>
+                    <div class="room-status-container">
+                        <span class="room-status-label">Trạng thái:</span>
+                        <span class="room-status available block" id="single-room-status-display">Còn phòng</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="hotel-callista-3551m2-phong-ngu-06-decox-design.jpg" alt="Phòng Đôi">
+                <h3>Phòng Đôi</h3>
+                <p>Diện tích tối thiểu là 32m², với giường đơn hoặc giường đôi.</p>
+                <p>Giá: $150/đêm</p>
+                <div class="room-details block">
+                    <a href="l.html"><button class="booking-button block">Đặt phòng</button></a>
+                    <div class="room-status-container">
+                        <span class="room-status-label">Trạng thái:</span>
+                        <span class="room-status available block" id="double-room-status-display">Còn phòng</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="download.jpg" alt="Suite">
+                <h3>Suite</h3>
+                <p>Loại phòng cao cấp bậc nhất với nội thất sang trọng.</p>
+                <p>Giá: $250/đêm</p>
+                <div class="room-details block">
+                    <a href="l.html"><button class="booking-button block">Đặt phòng</button></a>
+                    <div class="room-status-container">
+                        <span class="room-status-label">Trạng thái:</span>
+                        <span class="room-status available block" id="suite-room-status-display">Còn phòng</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    
+    
+        <section class="call-to-action block">
+            <h2>Hãy bắt đầu ngay</h2>
+            <p>Trải nghiệm tốt nhất của một khách sạn năm sao.</p>
+            <button>Liên hệ</button>
+        </section>
+    </main>
+    <script src="duancuoiky.js"></script>
+</body>
+</html>

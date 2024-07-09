@@ -1,0 +1,197 @@
+/* Reset và font chữ */
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #de5c8c, #d2001a);
+    background-size: 400% 400%; /* Để tăng kích thước gradient */
+    background-position: center;
+    text-align: center;
+    animation: gradientAnimation 12s ease-in-out infinite; /* Đổi tên animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Bắt đầu từ vị trí 0% */
+    }
+    50% {
+        background-position: 100% 50%; /* Di chuyển đến vị trí 100% */
+    }
+    100% {
+        background-position: 0% 50%; /* Quay trở lại vị trí ban đầu */
+    }
+}
+
+header {
+    background-color: #ffffff;
+    color: #078710;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 88px;
+    margin-left: 20px;
+}
+
+.logo img {
+    max-height: 67px;
+    width:auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #da1b60;
+}
+
+/* Login Form */
+.hero.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 0 50px #0ef;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+    margin: 2em auto; /* Căn giữa theo chiều ngang và có khoảng cách ở trên dưới */
+}
+
+.wrapper:hover {
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+.form-wrapper.sign-in {
+    transform: translateY(0); /* Điều chỉnh vị trí form */
+}
+
+.form-wrapper.sign-up {
+    position: absolute;
+    top: 450px;
+    left: 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
+}
+
+.remember {
+    margin: -5px 0 15px 5px;
+}
+
+.remember label {
+    color: #fff;
+    font-size: 14px;
+}
+
+.remember label input {
+    accent-color: #0ef;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.signUp-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp-link p {
+    color: #fff;
+}
+
+.signUp-link p a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signUp-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

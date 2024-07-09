@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên</title>
+    <link rel="stylesheet" href="quanli.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="King hotel.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/duancuoiky.html">Trang chủ</a></li>
+                <li class="dropdown">
+                    <a href="http://127.0.0.1:5500/danhsachphong.html">Danh sách phòng</a>
+                </li>
+                <li><a href="http://127.0.0.1:5500/bai%203.html">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Danh sách nhân viên</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã nhân viên</th>
+                    <th>Họ và tên</th>
+                    <th>Chức vụ</th>
+                    <th>Bộ phận</th>
+                    <th>Lương</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+                </tr>
+            </thead>
+            <tbody id="employee-table-body">
+            </tbody>
+        </table>
+        <a href="http://127.0.0.1:5500/themnhanvien.html" class="gradient-button">Thêm nhân viên mới</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trang web quản lí nhân viên</p>
+    </footer>    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('http://127.0.0.1:8000/nhanvien')
+                .then(response => response.json())
+                .then(data => {
+                    data.nhanviens.forEach(nhanvien => {
+                        addEmployeeRow(nhanvien);
+                    });
+                })
+                .catch(error => console.error('Lỗi khi lấy dữ liệu nhân viên:', error));
+        });
+
+        function addEmployeeRow(nhanvien) {
+            if (!document.querySelector(`#employee-table-body tr[data-id="${nhanvien.manv}"]`)) {
+                const row = document.createElement('tr');
+                row.setAttribute('data-id', nhanvien.manv);
+                row.innerHTML = `
+                    <td>${nhanvien.manv}</td>
+                    <td>${nhanvien.hoten}</td>
+                    <td>${nhanvien.chucvu}</td>
+                    <td>${nhanvien.bophan}</td>
+                    <td>${nhanvien.luong}</td>
+                    <td><button class="edit-btn" onclick="editEmployee('${nhanvien.manv}')">SỬA</button></td>
+                    <td><button class="delete-btn" onclick="deleteEmployee('${nhanvien.manv}')">XÓA</button></td>
+                `;
+                document.getElementById('employee-table-body').appendChild(row);
+            }
+        }
+
+        function editEmployee(manv) {
+            window.location.href = `http://127.0.0.1:5500/capnhat.html?manv=${manv}`;// Implement edit functionality here
+            alert('Sửa nhân viên: ' + manv);
+        }
+
+        function deleteEmployee(manv) {
+            if (confirm('Bạn có chắc chắn muốn xóa không?')) {
+                fetch(`http://127.0.0.1:8000/nhanvien/${manv}`, {
+                    method: 'DELETE'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        document.querySelector(`#employee-table-body tr[data-id="${manv}"]`).remove();
+                        alert('Đã xóa');
+                    } else {
+                        alert('Xóa thất bại');
+                    }
+                })
+                .catch(error => console.error('Lỗi khi xóa nhân viên:', error));
+            } else {
+                alert('Hủy bỏ');
+            }
+        }
+    </script>
+</body>
+</html>
